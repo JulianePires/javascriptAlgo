@@ -41,3 +41,5 @@ const div = (number1, number2) => number1 / number2
  * @returns	The corresponded century.
  */
 const centuryFromYear = (year) => Math.ceil(year/100)
+
+module.exports = {sum, sub, mult, div, centuryFromYear}
