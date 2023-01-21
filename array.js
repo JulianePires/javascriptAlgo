@@ -4,7 +4,6 @@
  * @param		array An array of numbers.
  * @returns	An array of indexes (numbers).
  */
-
 const nearestGreater = (array) => {
     const arraySize = array.length
     
@@ -23,5 +22,16 @@ const nearestGreater = (array) => {
     })
 }
 
-module.exports = {nearestGreater}
+const largestAdjacentProduct = (inputArray) => {
+    const arraySize = inputArray.length
+    let largestProduct = Number.MIN_SAFE_INTEGER
+    
+    for(let pointer = 0; pointer < arraySize-1; pointer++){
+        largestProduct = Math.max(inputArray[pointer]*inputArray[pointer+1], largestProduct)
+    }
+    
+    return largestProduct
+}
+
+module.exports = {nearestGreater, largestAdjacentProduct}
 	
